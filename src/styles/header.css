@@ -6,14 +6,16 @@ header {
 }
 header.header-top{
     height: 80vh;
-    margin: calc(8.33333% + 0px);
+    margin-top: 30%;
+    margin-left: calc(8.33333% + 0px);
+    margin-right: calc(8.33333% + 0px);
 }
 
 header .header-head {
-    width: 50%;
+    width: 40%;
 }
 header .header-menu {
-    width: 50%;
+    width: 60%;
 }
 
 header .header-head,
