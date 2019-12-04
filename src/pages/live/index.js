@@ -1,11 +1,11 @@
 import React from 'react'
 import Layout from '../../components/Layout'
 import { graphql } from 'gatsby'
+import Cover from '../../components/Cover'
 
 const Live = ({data}) => (
     <Layout>
-    <div className="card">
-    <div className="card-content">
+        <Cover>
         <div>
             <h2>Live</h2>
             {data.allMarkdownRemark.edges.map(({ node }, key) => (
@@ -19,8 +19,7 @@ const Live = ({data}) => (
             </div>
             ))}
         </div>
-    </div>
-    </div>
+        </Cover>
     </Layout>
 )
 

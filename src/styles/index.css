@@ -55,7 +55,6 @@ body {
     background: antiquewhite;
     width: 90vw;
     height: auto;
-    min-height: 70vh;
     margin: 0 auto;   
     box-shadow: 0 1px 6px rgba(0,0,0,.2);
 }
@@ -63,4 +62,31 @@ body {
 .card-content {
     margin: 15px 50px 15px 50px;
     padding: 10px 0 20px 0;
+}
+
+@media (max-width: 480px){
+    .card-content {
+        margin: 15px 15px 15px 15px;
+    }    
+}
+
+/* Cover */
+.cover {
+    background: antiquewhite;
+    width: 90vw;
+    height: auto;
+    min-height: 70vh;
+    margin: 0 auto;   
+    box-shadow: 0 1px 6px rgba(0,0,0,.2);
+}
+
+.cover-content {
+    margin: 15px 50px 15px 50px;
+    padding: 10px 0 20px 0;
+}
+
+@media (max-width: 480px){
+    .cover-content {
+        margin: 15px 15px 15px 15px;
+    }    
 }

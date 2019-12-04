@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../../components/Layout'
+import Cover from '../../components/Cover'
 
 export const ContactContent = () => (
     <div>
@@ -13,11 +14,9 @@ export const ContactContent = () => (
 )
 const Contact = () => (
     <Layout>
-    <div className="card">
-    <div className="card-content">
-        <ContactContent/>
-    </div>
-    </div>
+        <Cover>
+            <ContactContent/>
+        </Cover>
     </Layout>
 )
 

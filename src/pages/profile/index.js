@@ -1,10 +1,10 @@
 import React from 'react'
 import Layout from '../../components/Layout'
+import Cover from '../../components/Cover'
 
 const Profile = () => (
     <Layout>
-    <div className="card">
-    <div className="card-content">
+        <Cover>
         <div>
             <h2>Profile</h2>
             <p>
@@ -22,8 +22,7 @@ const Profile = () => (
             four idea
             </p>
         </div>
-    </div>
-    </div>
+        </Cover>
     </Layout>
 )
 

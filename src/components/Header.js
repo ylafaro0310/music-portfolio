@@ -14,9 +14,9 @@ class Header extends React.Component {
                     <div className="header-title">
                         Yukigumo
                     </div>
-                    <div className="header-lead">
+                    {isTopPage && <div className="header-lead">
                         Bassist / Composer / Arranger
-                    </div>
+                    </div>}
                 </a>
                 </div>
                 <nav className="header-menu">

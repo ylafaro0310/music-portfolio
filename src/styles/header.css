@@ -5,10 +5,11 @@ header {
     margin-right: calc(8.33333% + 0px);
 }
 header.header-top{
-    height: 80vh;
+    height: 30vh;
     margin-top: 30%;
     margin-left: calc(8.33333% + 0px);
     margin-right: calc(8.33333% + 0px);
+    margin-bottom: 55vh;
 }
 
 header .header-head {
@@ -46,4 +47,18 @@ header .header-menu li a {
 header .header-lead {
     font-size: 14px;
     margin-top: 5px;
+}
+
+
+
+@media (max-width: 480px){
+    header .header-head,
+    header .header-menu {
+        width: 100%;
+    }    
+    header .header-menu ul,
+    header .header-menu li a {
+        margin-top: 0;
+        padding-left: 0;
+    }
 }
