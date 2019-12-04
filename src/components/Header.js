@@ -15,7 +15,7 @@ class Header extends React.Component {
                         Yukigumo
                     </div>
                     {isTopPage && <div className="header-lead">
-                        Bassist / Composer / Arranger
+                        Bassist / Composer
                     </div>}
                 </a>
                 </div>
