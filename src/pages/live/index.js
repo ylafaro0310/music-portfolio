@@ -28,6 +28,7 @@ export default Live
 export const query = graphql`
     query {
         allMarkdownRemark(
+            sort: { order: DESC, fields: [frontmatter___date] }
             filter: { fields: { collection : { eq: "live" } } }
         ) {
         edges {
