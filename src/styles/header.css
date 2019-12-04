@@ -15,6 +15,7 @@ header.header-top{
 
 header .header-head {
     width: 40%;
+    margin-bottom: 5px;
 }
 header .header-menu {
     width: 60%;
