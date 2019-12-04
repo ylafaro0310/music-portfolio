@@ -8,7 +8,6 @@ import { ContactContent } from "./contact/index"
 
 const IndexPage = ({data}) => (
   <Layout isTopPage>
-    <SEO title="Home" />
     <div className="card">
       <div className="card-content">
       <h2>Works</h2>        

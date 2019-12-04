@@ -30,6 +30,16 @@ body {
     overflow-y: scroll;
 }
 
+.container {
+    padding: 0 10% 0 10%;
+}
+
+@media (max-width: 480px){
+    .container {
+        padding: 0;
+    }
+}
+
 /* Youtube responsive */
 @media (max-width: 480px){
 .frame-wrapper__video {
@@ -53,7 +63,7 @@ body {
 /* Card */
 .card {
     background: antiquewhite;
-    width: 90vw;
+    width: 90%;
     height: auto;
     margin: 0 auto;   
     box-shadow: 0 1px 6px rgba(0,0,0,.2);
@@ -73,7 +83,7 @@ body {
 /* Cover */
 .cover {
     background: antiquewhite;
-    width: 90vw;
+    width: 90%;
     height: auto;
     min-height: 70vh;
     margin: 0 auto;   
