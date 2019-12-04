@@ -1,12 +1,36 @@
 html {
     background-color: antiquewhite;
+    font-weight: lighter;
+}
+
+h1,h2,h3,h4{
+    font-weight: lighter;
+}
+
+a {
+    color: black;
+}
+/* Fixed background image */
+body::before {
+    content: '';
+    background: url('../images/header.jpg') no-repeat center center;
+    background-size: cover;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
 }
 
 body {
     margin: 0px;
     font-family: 'nimbus-sans', sans-serif;
+    overflow-y: scroll;
 }
 
+/* Youtube responsive */
 @media (max-width: 480px){
 .frame-wrapper__video {
     position: relative;
@@ -24,4 +48,19 @@ body {
     top: 0;
     left: 0;
 }
+}
+
+/* Card */
+.card {
+    background: antiquewhite;
+    width: 90vw;
+    height: auto;
+    min-height: 70vh;
+    margin: 0 auto;   
+    box-shadow: 0 1px 6px rgba(0,0,0,.2);
+}
+
+.card-content {
+    margin: 15px 50px 15px 50px;
+    padding: 10px 0 20px 0;
 }

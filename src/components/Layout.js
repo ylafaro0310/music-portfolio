@@ -1,10 +1,14 @@
 import React from 'react'
 import Header from './Header'
+import Footer from './Footer'
 
-const Layout = ({children}) => (
+const Layout = ({isTopPage=false,children}) => (
     <div>
-    <Header/>
-    {children}
+        <Header isTopPage={isTopPage}/>
+        {children}
+        <div style={{margin: "50px 0 20px 0",color: "antiquewhite",textAlign: "center"}}>
+            ©2019　Yukigumo all rights reserved
+        </div>
     </div>
 )
 

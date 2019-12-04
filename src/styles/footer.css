@@ -1,0 +1,32 @@
+footer {
+    background: antiquewhite;
+    height: 20vh;
+    margin-top: 100px;
+}
+
+footer .footer-head {
+    width: 50%;
+}
+footer .footer-menu {
+    width: 50%;
+}
+
+footer .footer-head,
+footer .footer-menu {
+    float: left;
+    height: 50%;
+}
+
+footer .footer-menu ul {
+    list-style: none;
+}
+
+footer .footer-menu li {
+    display: inline-block;
+}
+
+footer .footer-menu li a {
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
