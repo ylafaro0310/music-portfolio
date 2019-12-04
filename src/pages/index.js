@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import "../styles/index.css"
-import { ContactContent } from "./contact"
+import { ContactContent } from "./contact/index"
 
 const IndexPage = () => (
   <Layout isTopPage>
