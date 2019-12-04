@@ -8,7 +8,7 @@ export const ContactContent = () => (
         <p>
         一緒に音楽活動をしてくださる方、その他お問い合わせはこちらまでお願いいたします。
         <br/>
-        <a href="mailto:y16mukurou@gmail.com">y16mukurou@gmail.com</a>
+        <a href="mailto:yukigumo0310@gmail.com">yukigumo0310@gmail.com</a>
         </p>
     </div>
 )
