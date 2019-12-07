@@ -1,3 +1,5 @@
+const config = require("./siteConfig")
+
 module.exports = {
   siteMetadata: {
     title: `Yukigumo`,
@@ -51,6 +53,12 @@ module.exports = {
         // Plugins configs
         plugins: [],
       },
+    },
+    {
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingId: config.googleAnalyticsID
+      }
     },
   ],
 }
