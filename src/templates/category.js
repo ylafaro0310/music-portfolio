@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Cover from '../components/Cover'
+import Item from '../components/Item'
 //import { HTMLContent } from '../components/Content'
 
 const Category = ({data}) => {
@@ -11,7 +12,7 @@ const Category = ({data}) => {
               {data.allMarkdownRemark.edges.map(({node},key)=>(
                 <div key={key}>
                   <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
-                  {node.frontmatter.imageUrl && <img src={node.frontmatter.imageUrl}/>}
+                  {/*node.frontmatter.imageUrl && <img src={node.frontmatter.imageUrl}/>*/}
                 </div>
               ))}
             </Cover>

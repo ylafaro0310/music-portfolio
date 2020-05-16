@@ -100,3 +100,11 @@ body {
         margin: 15px 15px 15px 15px;
     }    
 }
+
+/* Item */
+.item {
+    background: white;
+    width: 45%;
+    min-height: 20vh;
+    box-shadow: 0 1px 6px rgba(0,0,0,.2);
+}
