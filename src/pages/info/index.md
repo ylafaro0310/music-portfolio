@@ -1,5 +1,4 @@
 ---
-path: /info
 title: Info
 templateKey: 'info-page'
 ---

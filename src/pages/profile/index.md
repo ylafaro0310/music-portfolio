@@ -1,5 +1,4 @@
 ---
-path: /profile
 title: Profile
 templateKey: 'profile-page'
 ---

@@ -1,5 +1,4 @@
 ---
-path: /works
 title: Can't take my eyes off you
 date: 2018-08-01
 templateKey: 'works-post'

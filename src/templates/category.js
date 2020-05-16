@@ -11,6 +11,7 @@ const Category = ({data}) => {
               {data.allMarkdownRemark.edges.map(({node},key)=>(
                 <div key={key}>
                   <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+                  {node.frontmatter.imageUrl && <img src={node.frontmatter.imageUrl}/>}
                 </div>
               ))}
             </Cover>
@@ -34,6 +35,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            imageUrl
           }    
         }
       }

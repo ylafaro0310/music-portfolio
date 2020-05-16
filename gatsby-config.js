@@ -59,6 +59,8 @@ module.exports = {
       options: {
         trackingId: config.googleAnalyticsID
       }
-    },
+    },{
+      resolve: "gatsby-plugin-netlify-cms",
+    }
   ],
 }

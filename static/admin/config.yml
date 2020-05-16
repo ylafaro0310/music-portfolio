@@ -1,0 +1,84 @@
+backend:
+    name: git-gateway
+    branch: master
+    commit_messages:
+      create: 'Create {{collection}} “{{slug}}”'
+      update: 'Update {{collection}} “{{slug}}”'
+      delete: 'Delete {{collection}} “{{slug}}”'
+      uploadMedia: '[skip ci] Upload “{{path}}”'
+      deleteMedia: '[skip ci] Delete “{{path}}”'
+
+media_folder: static/img
+public_folder: /img
+  
+collections:
+      - name: "works-janometones"
+        label: "Works/JANOMETONES"
+        folder: "src/pages/works/JANOMETONES"
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+        fields:
+        - {label: "Template Key", name: "templateKey", widget: "hidden", default: "works-post"}
+        - {label: "Title", name: "title", widget: "string"}
+        - {label: "Publish Date", name: "date", widget: "datetime"}
+        - {label: "Body", name: "body", widget: "markdown"}
+        - {label: "Category", name: "category", widget: "string"}
+        - {label: "Image", name: image, widget: image}
+        - {label: "ImageUrl", name: imageUrl, widget: string}
+
+      - name: "works-fouridea"
+        label: "Works/fouridea"
+        folder: "src/pages/works/fouridea"
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+        fields:
+            - {label: "Template Key", name: "templateKey", widget: "hidden", default: "works-post"}
+            - {label: "Title", name: "title", widget: "string"}
+            - {label: "Publish Date", name: "date", widget: "datetime"}
+            - {label: "Body", name: "body", widget: "markdown"}
+            - {label: "Category", name: "category", widget: "string"}
+            - {label: "Image", name: image, widget: image}
+            - {label: "ImageUrl", name: imageUrl, widget: string}
+      
+      - name: "works-demo"
+        label: "Works/demo"
+        folder: "src/pages/works/fouridea"
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+        fields:
+        - {label: "Template Key", name: "templateKey", widget: "hidden", default: "works-post"}
+        - {label: "Title", name: "title", widget: "string"}
+        - {label: "Publish Date", name: "date", widget: "datetime"}
+        - {label: "Body", name: "body", widget: "markdown"}
+        - {label: "Category", name: "category", widget: "string"}
+        - {label: "Image", name: image, widget: image}
+        - {label: "ImageUrl", name: imageUrl, widget: string}
+    
+      - name: "live"
+        label: "Live"
+        folder: "src/pages/live"
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+        fields:
+        - {label: "Template Key", name: "templateKey", widget: "hidden", default: "live-page"}
+        - {label: "Title", name: "title", widget: "string"}
+        - {label: "Publish Date", name: "date", widget: "datetime"}
+        - {label: "Body", name: "body", widget: "markdown"}
+
+      - name: "pages"
+        label: "Pages"
+        files:
+          - file: "src/pages/info/index.md"
+            label: "Info"
+            name: "info"
+            fields:
+            - {label: "Template Key", name: "templateKey", widget: "hidden", default: "info-page"}
+            - {label: "Title", name: "title", widget: "string"}
+            - {label: "Body", name: "body", widget: "markdown"}
+          
+          - file: "src/pages/profile/index.md"
+            label: "Profile"
+            name: "profile"
+            fields:
+                - {label: "Template Key", name: "templateKey", widget: "hidden", default: "profile-page"}
+                - {label: "Title", name: "title", widget: "string"}
