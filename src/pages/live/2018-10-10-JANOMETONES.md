@@ -1,6 +1,7 @@
 ---
 title: JANOMETONES
 date: 2018-10-10
+templateKey: live-page
 ---
 Mix Box
 

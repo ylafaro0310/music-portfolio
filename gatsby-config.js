@@ -35,8 +35,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `live`,
-        path: `${__dirname}/src/contents/live/`,
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
       },
     },
     {

@@ -1,6 +1,7 @@
 ---
 title: JANOMETONES
 date: 2018-11-09
+templateKey: live-page
 ---
 DYNAMIC VIBRATO!
 
