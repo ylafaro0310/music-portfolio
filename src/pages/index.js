@@ -8,8 +8,8 @@ import { ContactContent } from "./contact/index"
 
 const IndexPage = ({data}) => (
   <Layout isTopPage>
-    <div className="card">
-      <div className="card-content">
+    <div className="top-cover">
+      <div className="top-cover-content">
       <h2>Works</h2>        
       <div>
         {data.work.edges.map(({ node }, key) => (
@@ -25,8 +25,8 @@ const IndexPage = ({data}) => (
       <Link to="/works">View all works→</Link>
       </div>
     </div>
-    <div className="card">
-    <div className="card-content">
+    <div className="top-cover">
+    <div className="top-cover-content">
       <h2>Live</h2>        
       <div>
       {data.live.edges.map(({ node }, key) => (
@@ -42,8 +42,8 @@ const IndexPage = ({data}) => (
       <Link to="/live">View all live→</Link>
       </div>
     </div>
-    <div className="card">
-    <div className="card-content">
+    <div className="top-cover">
+    <div className="top-cover-content">
       <ContactContent/>
     </div>
     </div>
