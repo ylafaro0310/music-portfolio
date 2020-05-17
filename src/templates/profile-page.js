@@ -12,7 +12,7 @@ const Profile = ({data}) => {
         <Cover>
         <div>
             <h2>{post.frontmatter.title}</h2>
-            {post.frontmatter.imageUrl && <img width="300px" src={post.frontmatter.imageUrl}/>}
+            {post.frontmatter.image && <img width="300px" src={post.frontmatter.image}/>}
             <HTMLContent content={post.html}/>
         </div>
         </Cover>
@@ -28,7 +28,7 @@ export const query = graphql`
       html
       frontmatter {
         title
-        imageUrl
+        image
       }
     }
   }

@@ -10,7 +10,7 @@ const Works = () => (
         <h2>Works</h2>
         <div>
             <h3>Band</h3>
-
+                
             <Link to='/works/JANOMETONES'>JANOMETONES</Link>
             <br/>
             <Link to='/works/fouridea'>four idea</Link>
