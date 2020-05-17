@@ -1,7 +1,8 @@
 ---
+templateKey: profile-page
 title: Profile
-templateKey: 'profile-page'
-imgUrl:
+imgUrl: null
+image: /img/profile.jpg
 ---
 ウォーキングベースを好む1995年製ベーシスト。
 
