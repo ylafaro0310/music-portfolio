@@ -12,7 +12,7 @@ const Profile = ({data}) => {
         <Cover>
         <div>
             <h2>{post.frontmatter.title}</h2>
-            <Img fixed={data.file.childImageSharp.fixed} />
+            {post.frontmatter.imageUrl && <img width="300px" src={post.frontmatter.imageUrl}/>}
             <HTMLContent content={post.html}/>
         </div>
         </Cover>
@@ -28,15 +28,7 @@ export const query = graphql`
       html
       frontmatter {
         title
-      }
-    }
-    file(relativePath: { eq: "profile.jpg" }) {
-      childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fixed(width: 300) {
-          ...GatsbyImageSharpFixed
-        }
+        imageUrl
       }
     }
   }

@@ -2,19 +2,33 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Cover from '../components/Cover'
-import Item from '../components/Item'
-//import { HTMLContent } from '../components/Content'
 
-const Category = ({data}) => {
+const Category = ({data, pageContext}) => {
     return (
         <Layout>
             <Cover>
+              <h2>{pageContext.category}</h2>
+              <div className='flexbox'>
               {data.allMarkdownRemark.edges.map(({node},key)=>(
-                <div key={key}>
-                  <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
-                  {/*node.frontmatter.imageUrl && <img src={node.frontmatter.imageUrl}/>*/}
-                </div>
+                <Link key={key} to={node.fields.slug} className='no-decoration'>
+                  <div className='card'>
+                      <div className='card__imgframe'>
+                        {node.frontmatter.imageUrl
+                        ? <img src={node.frontmatter.imageUrl}/>
+                        : null}
+                      </div>
+                    <div className='card__textbox' style={node.frontmatter.imageUrl ? {height: 'auto'}: {height: '100%'}}>
+                      <div className='card__titletext'>
+                        {node.frontmatter.title}
+                      </div>
+                      <div className='card__description'>
+                        {node.frontmatter.description}
+                      </div>
+                    </div>
+                  </div>
+                </Link>
               ))}
+              </div>
             </Cover>
         </Layout>
     )
@@ -36,6 +50,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            description
             imageUrl
           }    
         }

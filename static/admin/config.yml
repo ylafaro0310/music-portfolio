@@ -12,48 +12,21 @@ media_folder: static/img
 public_folder: /img
   
 collections:
-      - name: "works-janometones"
-        label: "Works/JANOMETONES"
-        folder: "src/pages/works/JANOMETONES"
+      - name: "works"
+        label: "Works"
+        folder: "src/pages/works"
         create: true
         slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
         fields:
         - {label: "Template Key", name: "templateKey", widget: "hidden", default: "works-post"}
         - {label: "Title", name: "title", widget: "string"}
         - {label: "Publish Date", name: "date", widget: "datetime"}
+        - {label: "Description", name: "description", widget: "string"}
         - {label: "Body", name: "body", widget: "markdown"}
         - {label: "Category", name: "category", widget: "string"}
         - {label: "Image", name: image, widget: image}
         - {label: "ImageUrl", name: imageUrl, widget: string}
 
-      - name: "works-fouridea"
-        label: "Works/fouridea"
-        folder: "src/pages/works/fouridea"
-        create: true
-        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-        fields:
-            - {label: "Template Key", name: "templateKey", widget: "hidden", default: "works-post"}
-            - {label: "Title", name: "title", widget: "string"}
-            - {label: "Publish Date", name: "date", widget: "datetime"}
-            - {label: "Body", name: "body", widget: "markdown"}
-            - {label: "Category", name: "category", widget: "string"}
-            - {label: "Image", name: image, widget: image}
-            - {label: "ImageUrl", name: imageUrl, widget: string}
-      
-      - name: "works-demo"
-        label: "Works/Demo"
-        folder: "src/pages/works/Demo"
-        create: true
-        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-        fields:
-        - {label: "Template Key", name: "templateKey", widget: "hidden", default: "works-post"}
-        - {label: "Title", name: "title", widget: "string"}
-        - {label: "Publish Date", name: "date", widget: "datetime"}
-        - {label: "Body", name: "body", widget: "markdown"}
-        - {label: "Category", name: "category", widget: "string"}
-        - {label: "Image", name: image, widget: image}
-        - {label: "ImageUrl", name: imageUrl, widget: string}
-    
       - name: "live"
         label: "Live"
         folder: "src/pages/live"

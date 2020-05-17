@@ -1,6 +1,7 @@
 ---
 title: Profile
 templateKey: 'profile-page'
+imgUrl:
 ---
 ウォーキングベースを好む1995年製ベーシスト。
 
