@@ -21,11 +21,11 @@ collections:
         - {label: "Template Key", name: "templateKey", widget: "hidden", default: "works-post"}
         - {label: "Title", name: "title", widget: "string"}
         - {label: "Publish Date", name: "date", widget: "datetime"}
-        - {label: "Description", name: "description", widget: "string"}
+        - {label: "Description", name: "description", widget: "string", required: "false"}
         - {label: "Body", name: "body", widget: "markdown"}
         - {label: "Category", name: "category", widget: "string"}
-        - {label: "Image", name: image, widget: image}
-        - {label: "ImageUrl", name: imageUrl, widget: string}
+        - {label: "Image", name: image, widget: image, required: "false"}
+        - {label: "ImageUrl", name: imageUrl, widget: string, required: "false"}
 
       - name: "live"
         label: "Live"
@@ -55,5 +55,5 @@ collections:
             fields:
                 - {label: "Template Key", name: "templateKey", widget: "hidden", default: "profile-page"}
                 - {label: "Title", name: "title", widget: "string"}
-                - {label: "Image", name: "image", widget: "image"}
+                - {label: "Image", name: "image", widget: "image", required: "false"}
                 - {label: "Body", name: "body", widget: "markdown"}
