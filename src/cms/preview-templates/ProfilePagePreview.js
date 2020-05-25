@@ -4,15 +4,19 @@ import { ProfilePageTemplate } from '../../templates/profile-page'
 
 const ProfilePagePreview = ({ entry, widgetFor, getAsset }) => {
   const data = entry.getIn(['data']).toJS()
-  return (
-    data 
-    ? <ProfilePageTemplate
-      content={widgetFor('body')}
-      title={entry.getIn(['data', 'title'])}
-      image={getAsset(data.image)}
-    />
-    : <div>Loading...</div>
-  )
+  if(data){
+    return (
+      <ProfilePageTemplate
+        content={widgetFor('body')}
+        title={entry.getIn(['data', 'title'])}
+        image={getAsset(data.image)}
+      />
+    )
+  }else{
+    return (
+      <div>Loading...</div>
+    )
+  }
 }
 
 ProfilePagePreview.propTypes = {
