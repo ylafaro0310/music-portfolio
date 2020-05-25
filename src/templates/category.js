@@ -3,6 +3,28 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Cover from '../components/Cover'
 
+export const CategoryTemplate = ({key,title,imageUrl,description,slug}) => {
+  return (
+    <Link key={key} to={slug} className='no-decoration'>
+      <div className='card'>
+          <div className='card__imgframe'>
+            {imageUrl
+            ? <img src={imageUrl}/>
+            : null}
+          </div>
+        <div className='card__textbox' style={imageUrl ? {height: 'auto'}: {height: '100%'}}>
+          <div className='card__titletext'>
+            {title}
+          </div>
+          <div className='card__description'>
+            {description}
+          </div>
+        </div>
+      </div>
+    </Link>
+  )
+}
+
 const Category = ({data, pageContext}) => {
     return (
         <Layout>
@@ -10,23 +32,13 @@ const Category = ({data, pageContext}) => {
               <h2>{pageContext.category}</h2>
               <div className='flexbox'>
               {data.allMarkdownRemark.edges.map(({node},key)=>(
-                <Link key={key} to={node.fields.slug} className='no-decoration'>
-                  <div className='card'>
-                      <div className='card__imgframe'>
-                        {node.frontmatter.imageUrl
-                        ? <img src={node.frontmatter.imageUrl}/>
-                        : null}
-                      </div>
-                    <div className='card__textbox' style={node.frontmatter.imageUrl ? {height: 'auto'}: {height: '100%'}}>
-                      <div className='card__titletext'>
-                        {node.frontmatter.title}
-                      </div>
-                      <div className='card__description'>
-                        {node.frontmatter.description}
-                      </div>
-                    </div>
-                  </div>
-                </Link>
+                <CategoryTemplate 
+                  key={key}
+                  title={node.frontmatter.title} 
+                  description={node.frontmatter.description} 
+                  imageUrl={node.frontmatter.imageUrl} 
+                  slug={node.fields.slug}
+                />
               ))}
               </div>
             </Cover>

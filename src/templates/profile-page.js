@@ -1,26 +1,31 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
 import Layout from '../components/Layout'
 import Cover from '../components/Cover'
 import { HTMLContent } from '../components/Content'
 
-const Profile = ({data}) => {
-  const { markdownRemark: post } = data;
+export const ProfilePageTemplate = ({title, image, content}) => {
   return (
     <Layout>
         <Cover>
         <div>
-            <h2>{post.frontmatter.title}</h2>
-            {post.frontmatter.image && <img width="300px" src={post.frontmatter.image}/>}
-            <HTMLContent content={post.html}/>
+            <h2>{title}</h2>
+            {image && <img width="300px" src={image}/>}
+            <HTMLContent content={content}/>
         </div>
         </Cover>
     </Layout>
   )
 }
 
-export default Profile
+const ProfilePage = ({data}) => {
+  const { markdownRemark: post } = data;
+  return (
+    <ProfilePageTemplate title={post.frontmatter.title} image={post.frontmatter.image} content={post.html} />    
+  )
+}
+
+export default ProfilePage
 
 export const query = graphql`
   query ProfilePage($id: String!) {

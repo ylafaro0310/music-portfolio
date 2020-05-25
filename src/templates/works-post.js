@@ -4,16 +4,22 @@ import Layout from '../components/Layout'
 import Cover from '../components/Cover'
 import { HTMLContent } from '../components/Content'
 
-const WorksPost = ({data}) => {
-    const { markdownRemark: post } = data;   
+export const WorksPostTemplate = ({title,content}) => {
     return (
         <Layout>
             <Cover>
-                <h2>{post.frontmatter.title}</h2>
-                <HTMLContent content={post.html}/>
+                <h2>{title}</h2>
+                <HTMLContent content={content}/>
             </Cover>
         </Layout>
     )
+}
+
+const WorksPost = ({data}) => {
+  const { markdownRemark: post } = data;   
+  return (
+    <WorksPostTemplate title={post.frontmatter.title} content={post.html}/>
+  )
 }
 
 export default WorksPost

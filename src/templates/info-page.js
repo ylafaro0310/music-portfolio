@@ -4,19 +4,25 @@ import Layout from '../components/Layout'
 import Cover from '../components/Cover'
 import { HTMLContent } from '../components/Content'
 
-const Info = ({data}) => {
-    const { markdownRemark: post } = data;   
+export const InfoPageTemplate = ({content, title}) => {
     return (
         <Layout>
             <Cover>
-                <h2>{post.frontmatter.title}</h2>
-                <HTMLContent content={post.html}/>
+                <h2>{title}</h2>
+                <HTMLContent content={content}/>
             </Cover>
         </Layout>
     )
 }
 
-export default Info
+const InfoPage = ({data}) => {
+  const { markdownRemark: post } = data;
+  return (
+    <InfoPageTemplate title={post.frontmatter.title} content={post.html} />
+  )
+}
+
+export default InfoPage
 
 export const infoPageQuery = graphql`
   query InfoPage($id: String!) {
