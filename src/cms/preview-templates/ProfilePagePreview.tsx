@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ProfilePageTemplate } from '../templates/profile-page'
+import { ProfilePageTemplate } from '../../templates/profile-page'
 
 const ProfilePagePreview = ({ entry, widgetFor, getAsset }) => {
   const data = entry.getIn(['data']).toJS()

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { WorksPostTemplate } from '../templates/works-post'
-import { CategoryTemplate } from '../templates/category'
+import { WorksPostTemplate } from '../../templates/works-post'
+import { CategoryTemplate } from '../../templates/category'
 
 const WorksPostPreview = ({ entry, widgetFor, getAsset }) => {
     const data = entry.getIn(['data']).toJS()
