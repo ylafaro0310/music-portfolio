@@ -1,7 +1,11 @@
 ---
+templateKey: info-page
 title: Info
-templateKey: 'info-page'
 ---
+2020.04.17 JANOMETONES「恒星」、ベース参加。
+
+2020.03.14 JANOMETONES「泡沫」、ベース参加。
+
 2019.11.21 JANOMETONES「通り雨」、ベース参加。
 
 2019.01.27 ちズにしライブ@ Ai music Studio。
