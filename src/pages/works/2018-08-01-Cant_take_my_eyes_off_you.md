@@ -10,3 +10,5 @@ imageUrl: https://img.youtube.com/vi/20U4yowfnWw/mqdefault.jpg
 
 有名曲のジャズ風カバーである本音源。
 ジャズ風のアレンジでありながら聴きやすく、ある意味このバンドの特徴を表した曲になったと思います。
+
+編曲者: [んむらみ](https://note.com/shimmumi/n/nb5be18340b18)
